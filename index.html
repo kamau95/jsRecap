@@ -3,23 +3,12 @@
   <head>
     <title>My Web Page</title>
 
-    <script>
-        let names = ["John", "Jane", "Jim", "Joan"];
-
-let updatedNames = names.map((name)=> {
-  return name.toUpperCase( );
-});
-
-function displayNames( ) {
-  let element = document.getElementById("myElement");
-  element.innerHTML = updatedNames.join(", ");
-}
-
+    <script src="recap.js">
     </script>
 
   </head>
   <body>
     <div id="myElement"></div>
-    <button onclick="displayNames( )">Display Names</button>
+    <button onclick="displayNames( )"">Display Names</button>
   </body>
 </html>
