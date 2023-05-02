@@ -1,3 +1,19 @@
+const axios= require('axios');
+const data = axios.get("https://cat-fact.herokuapp.com/facts");
+
+data.then( ( res)=>{
+  console.log(res)
+})
+.catch( (err )=>{
+  console.log(err)
+})
+.finally( ( )=>{
+  console.log( "promise was successful")
+})
+console.log( data);
+
+
+//array and map method to manipulate it
 let names = ["John", "Jane", "Jim", "Joan"];
 
 let updatedNames = names.map((name)=> {
@@ -19,7 +35,8 @@ const event=new Promise((resolve,reject)=>{
     reject("Name is not pedro the Name is " + name )
   }
 });
-event.then( 
+event.
+then( 
   ( name)=>{ console.log(name)
   }
 )
@@ -28,3 +45,6 @@ event.then(
     console.log( err)
   }
 )
+.finally( ( )=>{
+  console.log( "promise is finished")
+})
