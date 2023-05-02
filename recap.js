@@ -1,5 +1,5 @@
 const axios= require('axios');
-const data = axios.get("https://cat-fact.herokuapp.com/facts");
+/**const data = axios.get("https://cat-fact.herokuapp.com/facts");
 
 data.then( ( res)=>{
   console.log(res)
@@ -9,8 +9,19 @@ data.then( ( res)=>{
 })
 .finally( ( )=>{
   console.log( "promise was successful")
-})
-console.log( data);
+})**/
+
+// another alternative using async in promises to avoid .then and catch methods
+const fetchData= async( )=>{
+  try{
+    const data= await axios.get("https://cat-fact.herokuapp.com/facts")
+    console.log(data)
+  }
+  catch (err) {
+    console.log(err)
+  }
+}
+fetchData( );
 
 
 //array and map method to manipulate it
